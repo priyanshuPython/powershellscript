@@ -1,7 +1,0 @@
-
-$base64AuthInfo = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(("{0}:{1}" -f "","a5rpmv3umn63onkx5yxfgqjw2ovjxeobtmkzosdnf2lcujdx72jq
-")))$url = "https://dev.azure.com/priyanshumulani/priyanshudevops}/_apis/distributedtask/variablegroups/1?api-version=5.0-preview.1"
-$json = @"
-{"id":1,"type":"Vsts","name":"MyVariableGrp","variables":{"testVariable":{"isSecret":false,"value":"newValue"}}}
-"@
-$pipeline = Invoke-RestMethod -Uri $url -Method Put -Body $json -ContentType "application/json" -Headers @{Authorization=("Basic {0}" -f $base64AuthInfo)}
