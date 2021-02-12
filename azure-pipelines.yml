@@ -14,8 +14,8 @@ steps:
   inputs:
     targetType: inline
     script: |
-        $base64AuthInfo = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(("{0}:{1}" -f "","mghwpug7mbpp6hvz2q27djjbijkippkxgusfm6xwfounphk4ujoa")))
-        $url = "https://dev.azure.com/priyanshumulani/priyanshudevops/_apis/distributedtask/variablegroups/1?api-version=5.0-preview.1"
+        $base64AuthInfo = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(("{0}:{1}" -f "","gojqtchpxkcxlrayksy4xkpyilmjbrdm4cmtuwwvh2ivtzfj4tma")))
+        $url = "https://dev.azure.com/priyanshumulani/priyanshudevops/_apis/distributedtask/variablegroups/2?api-version=5.0-preview.1"
         $json = @"
         {"id":2,"type":"Vsts","name":"priyanshu","variables":{"Name":{"isSecret":false,"value":"demo01"},"Contact":{"value":"900000000"}}}
         "@
